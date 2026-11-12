@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Clínica Vida — atendimento humanizado e tecnologia de ponta.">
+  <title>Clínica Vida | Sua saúde em boas mãos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="marca" href="#" aria-label="Clínica Vida - início">
+      <span class="marca-icone" aria-hidden="true">✚</span>
+      <span>Clínica <strong>Vida</strong></span>
+    </a>
+    <span class="topbar-info">Cuidado, confiança e bem-estar</span>
+  </header>
+
+  <main class="conteudo">
+    <section class="hero">
+      <span class="etiqueta">CUIDADO QUE ACOLHE</span>
+      <h1>Sua saúde merece<br><span>atenção especial Do Dr.Limcz.</span></h1>
+      <p>Atendimento humanizado feito por Dr.Limcz que possui uma tecnologia de ponta para cuidar de você em todas as
+        fases da vida.</p>
+      <a class="botao-principal" href="#sobre">Conheça a clínica <span aria-hidden="true">→</span></a>
+    </section>
+
+    <section class="sobre" id="sobre">
+      <div class="sobre-icone" aria-hidden="true">♡</div>
+      <div>
+        <h2>Clínica Vida</h2>
+        <p>Um espaço pensado para te transformar em prozin em tudo.</p>
+      </div>
+    </section>
+
+    <section class="privacidade">
+      <div>
+        <span class="etiqueta">TRANSPARÊNCIA</span>
+        <h2>Você no controle da sua privacidade</h2>
+        <p>Dr.Limcz usa cookies para manter o site funcionando e, se você permitir, entender como melhorar sua
+          experiência.</p>
+      </div>
+      <button class="botao-secundario" type="button" onclick="reabrirPreferencias()">Reabrir preferências de
+        cookies</button>
+    </section>
+
+    <section class="painel-status" id="painel-status" aria-live="polite">
+      <div class="status-cabecalho">
+        <span class="status-ponto"></span>
+        <h2>Status do consentimento</h2>
+      </div>
+      <p class="status-ajuda">Aguardando sua escolha de privacidade.</p>
+    </section>
+  </main>
+
+  <footer><span>© 2026 Clínica Vida</span><span>Respeito à sua privacidade de prozin.</span></footer>
+
+  <div class="sobreposicao" id="sobreposicao" hidden></div>
+  <section class="banner" id="banner" role="dialog" aria-modal="true" aria-labelledby="banner-titulo"
+    aria-describedby="banner-descricao" hidden>
+    <div class="banner-topo">
+      <div class="banner-icone" aria-hidden="true">♧</div>
+      <button class="fechar" type="button" onclick="aceitarApenasEssenciais()"
+        aria-label="Fechar e aceitar apenas cookies essenciais">×</button>
+    </div>
+    <span class="etiqueta">SUAS PREFERÊNCIAS</span>
+    <h2 id="banner-titulo">Valorizamos sua privacidade</h2>
+    <p id="banner-descricao">Escolha quais categorias de cookies deseja aceitar. Você pode alterar sua decisão quando
+      quiser.</p>
+
+    <div class="categorias">
+      <div class="categoria">
+        <div><strong>Essenciais</strong><small>Necessários para o funcionamento do site.</small></div>
+        <label class="switch bloqueado" aria-label="Cookies essenciais sempre ativos">
+          <input type="checkbox" checked disabled><span class="trilho"></span>
+        </label>
+      </div>
+      <div class="categoria">
+        <div><strong>Análise</strong><small>Ajudam a entender o uso do site.</small></div>
+        <label class="switch" aria-label="Permitir cookies de análise">
+          <input type="checkbox" id="chk-analise"><span class="trilho"></span>
+        </label>
+      </div>
+      <div class="categoria">
+        <div><strong>Marketing</strong><small>Permitem personalizar conteúdos e campanhas.</small></div>
+        <label class="switch" aria-label="Permitir cookies de marketing">
+          <input type="checkbox" id="chk-marketing"><span class="trilho"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="banner-botoes">
+      <button class="botao-aceitar" type="button" onclick="aceitarTodos()">Aceitar todos</button>
+      <button class="botao-neutro" type="button" onclick="aceitarApenasEssenciais()">Apenas essenciais</button>
+      <button class="botao-salvar" type="button" onclick="salvarSelecao()">Salvar seleção</button>
+    </div>
+    <p class="nota-privacidade">Sua escolha será salva por até 1 ano. <a href="#sobre"
+        onclick="reabrirPreferencias()">Saiba mais</a></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
